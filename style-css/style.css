@@ -1,0 +1,80 @@
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 70px;
+}
+
+.box {
+    background-color: #333;
+    position: absolute;
+    z-index: 10;
+    width: 292px;
+    height: 192px;
+    border-radius: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+   
+    color: #fff;
+    font-size: 50px;
+}
+
+.card::after {
+    content: "";
+    width: 600px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent, transparent, #ffc70c);
+    position: absolute;
+    animation: rotate 3s linear infinite;
+    animation-delay: -1.5s;
+}
+
+.card::before {
+    content: "";
+    width: 600px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent, transparent, #ffc70c);
+    position: absolute;
+    animation: rotate 3s linear infinite;
+}
+
+
+
+@keyframes rotate {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.card:hover {
+    transform: scale(1.2);
+}
